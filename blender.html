@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing</title>
+    <link rel="icon" type="image/x-icon" href="assets/photocamera_86186.ico">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+    <div class="top_div">
+        <div class="socials">
+            <a class="social_anchors fb" href="#"><img src="assets/fb.png" alt="fb logo"></a>
+            <a class="social_anchors" href="#"><img src="assets/insta.png" alt="insta logo"></a>
+            <a class="social_anchors" href="#"><img src="assets/tiktok.png" alt="tiktok logo"></a>
+            <a class="social_anchors" href="#"><img src="assets/linkedin.png" alt="linkedin logo"></a>
+        </div>
+
+        <a href="index.html" class="main_title"><img src="assets/title3.png" alt="title"></a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li class="upward"><a href="about.html">ABOUT</a></li>
+        <li class="forward"><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <!-- ................................container................................... -->
+    <h1 class="h1">Video Gallery</h1>
+    <div class="container_main">
+        
+        
+        <div class="container" id="media-container">
+            <img src="assets/alia bhatt.png" alt="Thumbnail">
+            <div class="overlay">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+            <video src="assets/videos/color grade alia bhatt.mp4" controls></video>
+        </div>
+
+<div class="container_main_nest">
+
+    <div class="container_small" id="media-container_small">
+        <img src="assets/alia bhatt.png" alt="Thumbnail_small">
+        <div class="overlay_small">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </div>
+        <video src="assets/videos/color grade alia bhatt.mp4" controls></video>
+    </div>
+
+
+    <div class="container_small" id="media-container_small">
+        <img src="assets/alia bhatt.png" alt="Thumbnail_small">
+        <div class="overlay_small">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </div>
+        <video src="assets/videos/color grade alia bhatt.mp4" controls></video>
+    </div>
+
+
+    <div class="container_small" id="media-container_small">
+        <img src="assets/alia bhatt.png" alt="Thumbnail_small">
+        <div class="overlay_small">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </div>
+        <video src="assets/videos/color grade alia bhatt.mp4" controls></video>
+    </div>
+
+</div>
+
+    </div>
+
+    <div class="copyright">
+        COPYRIGHT &copy; 2024 Visuals by Husnain
+    </div>
+
+    <script>
+        const container = document.getElementById('media-container');
+        const image = container.querySelector('img');
+        const overlay = container.querySelector('.overlay');
+        const video = container.querySelector('video');
+
+        container.addEventListener('click', () => {
+            container.classList.add('active');
+            image.style.display = 'none';
+            overlay.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
+
+        video.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!container.contains(event.target)) {
+                container.classList.remove('active');
+                image.style.display = 'block';
+                overlay.style.display = 'flex';
+                video.style.display = 'none';
+                video.pause();
+            }
+        });
+    </script>
+
+
+    <script>
+   function setupVideoInteraction(container) {
+        const image = container.querySelector('img');
+        const overlay = container.querySelector('.overlay_small');
+        const video = container.querySelector('video');
+
+        container.addEventListener('click', () => {
+            container.classList.add('active');
+            image.style.display = 'none';
+            overlay.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
+
+        video.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!container.contains(event.target)) {
+                container.classList.remove('active');
+                image.style.display = 'block';
+                overlay.style.display = 'flex';
+                video.style.display = 'none';
+                video.pause();
+            }
+        });
+    }
+
+    // Setup video interaction for the main container
+    const mainContainer = document.getElementById('media-container');
+    setupVideoInteraction(mainContainer);
+
+    // Setup video interaction for all small containers
+    const smallContainers = document.querySelectorAll('.container_small');
+    smallContainers.forEach((container) => {
+        setupVideoInteraction(container);
+    });
+        
+    </script>
+
+
+</body>
+
+</html>

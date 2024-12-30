@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/photocamera_86186.ico">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <div class="top_div">
+    <div class="socials">
+        <a  class="social_anchors fb" href="#"><img src="assets/fb.png" alt="fb logo"></a>
+        <a class="social_anchors" href="#"><img src="assets/insta.png" alt="insta logo"></a>
+        <a class="social_anchors" href="#"><img src="assets/tiktok.png" alt="tiktok logo"></a>
+        <a class="social_anchors" href="#"><img src="assets/linkedin.png" alt="linkedin logo"></a>
+    </div>
+
+    <a href="index.html" class="main_title"><img src="assets/title3.png" alt="title"></a>
+</div>
+
+
+<ul class="nav-links">
+    <li><a href="portfolio.html">PORTFOLIO</a></li>
+    <li class="upward"><a href="about.html">ABOUT</a></li>
+    <li class="forward"><a href="contact.html">CONTACT</a></li>
+</ul>
+
+<div class="portfolio_opt">
+
+    <a href="blender.html" class="opts opt1">
+        <img src="assets/blender.png" alt="blender logo">
+        <h2>3D</h2>
+    </a>
+
+    <a href="vfx.html" class="opts opt2">
+        <img src="assets/vfx.png" alt="vfx logo">
+        <h2>Vfx</h2>
+    </a>
+
+    <a href="video_editing.html" class="opts opt3">
+        <img src="assets/camera.png" alt="camera logo">
+        <h2>Video Editing</h2>
+    </a>
+
+    <a href="video_editing.html" class="opts opt3 ">
+        <img src="assets/pen tool.png" alt="Graphics logo">
+        <h2>Graphics</h2>
+    </a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="copyright">
+    COPYRIGHT &copy; 2024 Visuals by Husnain
+</div>
+
+
+<script>
+    const video = document.getElementById('portfolioVideo');
+    const muteButton = document.getElementById('muteButton');
+
+    muteButton.addEventListener('click', () => {
+        if (video.muted) {
+            video.muted = false;
+            muteButton.textContent = 'Mute';
+        } else {
+            video.muted = true;
+            muteButton.textContent = 'Unmute';
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
